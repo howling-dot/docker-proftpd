@@ -9,6 +9,7 @@ Quick start
 ```bash
 docker run -d --net host \
 	-e FTP_LIST="user1:pass1;user2:pass2" \
+	-e MASQADDR="1.1.1.1" \
 	-v /path_to_ftp_dir_for_user1:/home/user1 \
 	-v /path_to_ftp_dir_for_user2:/home/user2 \
 	kibatic/proftpd
