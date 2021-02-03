@@ -14,4 +14,8 @@ if [ -n "$FTP_LIST" ]; then
 	done
 fi
 
+if [ -n "$MASQADDR" ]; then
+	sed -i "s/# MasqueradeAddress/MasqueradeAddress $MASQADDR/" /etc/proftpd/proftpd.conf
+fi
+
 exec "$@"
